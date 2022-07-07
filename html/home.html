@@ -1,0 +1,97 @@
+<content id="menu">
+    <div class="open userbg">
+        
+        <div class="happy-hour">L'Happy-Hour est actif de <span id="hh-start"></span> à <span id="hh-end"></span>.</div>
+
+        <p>Sélectionner la boisson que vous souhaitez :</p>
+    
+        <div id="products">
+    
+    
+        </div>
+    </div>
+    <div class="close userbg">
+        <p>Cet établissement est actuellement fermé. Merci de réessayer plus tard.</p>
+    </div>
+
+</content>
+
+<!-- <template id="item-tpl">
+    <div class="item" data-id="" data-price="" data-count="" onclick="this.classList.add('selected');">
+        <div class="item-top">
+            <div class="item-left">
+                <div class="item-name"></div>
+                <div class="item-desc"></div>
+                <div class="item-price"></div>
+                <div class="item-HH"></div>
+            </div>
+            <div class="item-right">
+                <div class="item-total"></div>
+            </div>
+        </div>
+        <div class="item-bottom">
+            <div class="item-minus" onclick="app.current.change(this.parentNode.parentNode, event, -1)">-</div>
+            <div class="item-count"></div>
+            <div class="item-plus" onclick="app.current.change(this.parentNode.parentNode, event, 1)">+</div>
+        </div>
+    </div>
+    <div class="item-remove" onclick="app.current.change(this.previousElementSibling, event)">Supprimer</div>
+</template> -->
+
+<template id="item-tpl">
+    <div class="item card" data-id="" data-price="" data-count="" onclick="this.classList.add('selected');">
+        <h1 class="item-name"></h1>
+        <p class="item-desc"></p>
+        <p><b class="item-price"></b> <span>/Unité</span> <b class="item-HH"></b></p>
+        <div class="hshow">
+            <p class="c9"><b class="item-total"></b> <br> <span>Total</span></p>
+            <div class="rowt">
+                <p class="sign" onclick="app.current.change(this.parentNode.parentNode.parentNode, event, -1)" >-</p>
+                <p class="text item-count"></p>
+                <p class="sign" onclick="app.current.change(this.parentNode.parentNode.parentNode, event, 1)">+</p>
+            </div>
+
+            <div class="rowt item-remove" onclick="app.current.change(this.parentNode.parentNode, event)">
+                <h4>Supprimer</h4>
+            </div>
+        </div>
+    </div>
+</template>
+
+<!-- 
+    <div class="usermain">
+
+        <header>
+            <div class="header">
+                <h1>BIENVENUE !</h1>
+                <h1 class="subtitle">AU HARDROCK CAFÉ</h1>
+
+        </header>
+
+        <div class="userbg">
+            <p>Sélectionnez la boisson que vous voulez</p>
+            <div class="cardbox">
+                <h2> BIÈRE</h2>
+                <div class="cardcon">
+                    <div class="card">
+                        <h1>BOISSON 1</h1>
+                        <p>Lorem ipsum, dolor sit, amet, consectetur, adipiscing elit.</p>
+                        <p>9€ <span>/Unité</span> </p>
+                        
+                        <div class="hshow">
+                            <p class="c9">9€ <br> <span>Total</span></p>
+                            <div class="rowt">
+                                <p class="sign" >-</p>
+                                <p class="text"> <span>x</span> 1</p>
+                                <p class="sign" >+</p>
+                            </div>
+
+                            <div class="rowt">
+                                <h4>Supprimer</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->

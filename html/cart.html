@@ -1,0 +1,163 @@
+<content class="paymentbg">
+    <div class="header chead">
+        <h1 class="subtext">PANIER</h1>
+    </div>
+
+    <div id="cart-items" data-items="0">
+
+
+    </div>
+
+    <div id="cart-total">
+        <div id="total-HT"></div>
+        <div id="total-TTC"></div>
+    </div>
+
+    <div class="btn-container btn">
+        <button onclick="app.router.resolve('/');">Annuler</button>
+        <button id="go-payment" onclick="app.current.payment();">Valider</button>
+    </div>
+
+</content>
+
+<template id="item-tpl">
+    <div class="item elem"  data-id="">
+        <div class="secondelement">
+            <div class="item-left texts">
+                <div class="item-name"></div>
+                <div><b class="item-price"></b><span>/Unité</span> </div>
+                <div class="item-total-container">
+                    <div class="item-total"></div>
+                    <div class="item-total-square">Total</div>
+                </div>
+            </div>
+            <div class="item-right btns">
+                <p class="item-minus" onclick="app.current.change(this.parentNode.parentNode.parentNode, event, -1);">-</p>
+                <p class="item-count black"></p>
+                <p class="item-plus" onclick="app.current.change(this.parentNode.parentNode.parentNode, event, 1);">+</p>
+            </div>
+        </div>
+    </div>
+</template>
+
+<!-- 
+<div class="usermain">
+
+    <header>
+        <div class="header chead">
+            <h1 class="text">HARDROCK CAFÉ</h1>
+            <h1 class="subtext">MEMBRE PRÉSENT SUR LA TABLE N°32</h1>
+
+            <div class="imgcon">
+                <div class="bgblack">
+                    <img src="./images/hcrab.png" alt="">
+                    <p>MAXIME</p>
+                </div>
+                <div>
+                    <img src="./images/hkiwi.png" alt="">
+                    <p>JULIE</p>
+                </div>
+                <div>
+                    <img src="./images/hhippo.png" alt="">
+                    <p>SYLVIE</p>
+                </div>
+                <div>
+                    <img src="./images/hfrog.png" alt="">
+                    <p>KÉVIN</p>
+                </div>
+            </div>
+            <div class="lockcon">
+                <img class="bblack" src="./images/lock.png" alt="">
+                <p class="cstyle">Le groupe est au complet Faites vos commandes</p>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="paymentbg">
+        <p>PANIER EN COMMUN</p>
+        <button class="topbtn">ACTUALISER LE PANIER</button>
+        <div class="elem">
+            <div class="firstelem black">
+                <img src="./images/crab.png" alt="">
+                <p>MAXIME</p>
+                <p>PANIER LIBRE</p>
+            </div>
+            <div class="secondelement">
+                <div class="texts">
+                    <p>BOISSON 1</p>
+                    <p>9€ <span>/Unité</span> </p>
+                    <p>9€ <br> <span>Total</span></p>
+                </div>
+                <div class="btns">
+                    <p>-</p>
+                    <p class="black">x1</p>
+                    <p>+</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="elem">
+            <div class="firstelem">
+                <img src="./images/kiwi-bird.png" alt="">
+                <p>JULIE</p>
+                <p>PANIER LIBRE</p>
+            </div>
+            <div class="secondelem">
+                <p>BOISSON 1</p>
+                <p>9€ <span>/Unité</span> </p>
+                <p>9€ <br> <span>Total</span></p>
+                <p>x1</p>
+            </div>
+            <div class="secondelem">
+                <p>BOISSON 1</p>
+                <p>9€ <span>/Unité</span> </p>
+                <p>9€ <br> <span>Total</span></p>
+                <p>x1</p>
+            </div>
+        </div>
+        <div class="elem">
+            <div class="firstelem">
+                <img src="./images/hippo.png" alt="">
+                <p>KEVIN</p>
+                <p>PANIER LIBRE</p>
+            </div>
+            <div class="secondelem">
+                <p>BOISSON 1</p>
+                <p>9€ <span>/Unité</span> </p>
+                <p>9€ <br> <span>Total</span></p>
+                <p>x1</p>
+            </div>
+        </div>
+        <div class="elem">
+            <div class="firstelem">
+                <img src="./images/frog.png" alt="">
+                <p>SYLVIE</p>
+                <p>PANIER LIBRE</p>
+            </div>
+            <div class="secondelem">
+                <p>BOISSON 1</p>
+                <p>9€ <span>/Unité</span> </p>
+                <p>9€ <br> <span>Total</span></p>
+                <p>x1</p>
+            </div>
+        </div>
+
+        <div class="btn">
+            <button>RETOUR AU MENU</button>
+            <button>VALIDER</button>
+        </div>
+
+
+    </div> -->
+
+
+
+
+
+
+
+
+</div>

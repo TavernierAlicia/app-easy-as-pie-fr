@@ -1,0 +1,175 @@
+body {  margin: auto; background-color: #434371;    }
+#header-title { font-size: 3em; text-align: center;}
+/* .btn { display: flex; justify-content:  center; align-items: center;  width: 120px; color: white; background: #0B1E32; border: 1px solid #0B1E32; text-transform: uppercase; font-weight: bold; font-size: 15px; height: 40px; cursor: pointer; user-select: none; }
+.btn.btn-light {color: #0B1E32; background: white; } */
+
+/* Home/Menu */
+#menu.close .open { display: none; }
+#menu.open .close { display: none; }
+#menu .happy-hour { display: none;  color: #DB4A5D; font-weight: bold; font-size: 14px; font-family: "Quicksand", sans-serif; transform: translate(10px, 135px);}
+#menu.hh .happy-hour { display: block; }
+#menu #stock-input { display: flex; align-items: center; }
+/* #products { padding-bottom: 100px; position: relative; } */
+#products #basket {  display: flex; justify-content:  center; align-items: center;  width: 120px; background: #db4a5d; border: 2px solid #db4a5d; text-transform: uppercase; font-weight: bold; font-size: 20px; height: 40px; cursor: pointer; user-select: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); color: white; font-family: "Quicksand", sans-serif;}
+/* #products .item { border: 1px solid #DB4A5D; margin: 10px auto; cursor: pointer; width: 250px; } */
+#products .item-HH { display: none; }
+#products .item.hh .item-price { text-decoration: line-through; }
+#products .item.hh .item-price ~ span { display: none; }
+
+#products .item.hh .item-HH { display: block; color: #db4a5d; }
+#products .item-remove { display: none; }
+#products .item.selected .item-remove { display: block; }
+/* #products .item.selected { background-color: #434371; border-color: #434371; color: white; font-weight: bold; cursor: default;} */
+/* #products .item-top { display: flex; justify-content: space-between; } */
+/* #products .item-total { padding: 10px 5px 0 10px; font-size: 1.3em; } */
+#products .item.selected .item-bottom, #products .item.selected .item-right { display: flex; }
+#products .item-bottom .item-plus, #products .item-bottom .item-minus { width: 30%; background: white; color: #0B1E32; cursor: pointer; text-align: center; }
+#products .item-bottom .item-count { flex-grow: 1; color: white; background: #0B1E32; text-align: center; }
+#products .item-HH::before { content: "Happy-Hour: "}
+
+/* Cart */
+#cart-items[data-items="0"] ~ .btn-container #go-payment { display: none; }
+.cart h2 { text-align: center; }
+.cart .btn-container { display: flex; justify-content: space-around;}
+
+/* #cart-items .item, #cart-total { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; } */
+/* #cart-items .item > div { display: flex; justify-content:  space-between; align-items: center; width: 65%; border: 1px solid #0B1E32; height: 35px;} */
+/* #cart-items .item .item-left {  width: calc(100% - 140px);  padding: 0 10px; font-size: 11px; }
+#cart-items .item .item-left .item-name { text-transform: uppercase; }
+#cart-items .item .item-left .item-total { font-weight: bold; font-size: 12px; margin-bottom: 2px; } */
+/* #cart-items .item .item-left .item-total-square { border: 1px solid #0b1e5288; opacity: .5; text-align: center; font-size: 8px; width: fit-content; margin: auto; padding: 0 3px;} */
+/* #cart-items .item .item-right { width: 100px; user-select: none;}
+#cart-items .item .item-right .item-plus, #cart-items .item .item-right .item-minus { width: 30%; background: white; color: #0B1E32; cursor: pointer; text-align: center; } */
+/* #cart-items .item .item-right .item-count { flex-grow: 1; color: white; background: #0B1E32; text-align: center; height: 37px; line-height: 37px; } */
+#cart-total { font-family: "Quicksand", sans-serif; }
+/* Status page */
+#status .status { display: none; text-align: center;}
+#status.wip  #wip, #status.finish #finish { display: block;}
+
+#status { position: absolute; top: 0; }
+
+#status .btn_component {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+}
+
+#status #finish .btn_component { bottom: 80px }
+
+.btn_component button:hover {
+  background-color: #0b1e32;
+  color: white;
+}
+
+@media screen and (max-width: 1366px) and (min-width: 1024px) {
+  .btn_component button {
+    padding: 8px 35px;
+    font-size: 12px;
+  } 
+}
+.btn_component button {
+  cursor: pointer;
+  padding: 10px 25px;
+  background-color: white;
+  border: 2px solid #434371;
+  color: black;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+}
+
+.btn_component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 25px;
+}
+/* Status loader CSS */
+.lds-roller {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+  }
+  .lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+  }
+  .lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #434371;
+    margin: -4px 0 0 -4px;
+  }
+  .lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+  }
+  .lds-roller div:nth-child(1):after {
+    top: 63px;
+    left: 63px;
+  }
+  .lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+  }
+  .lds-roller div:nth-child(2):after {
+    top: 68px;
+    left: 56px;
+  }
+  .lds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+  }
+  .lds-roller div:nth-child(3):after {
+    top: 71px;
+    left: 48px;
+  }
+  .lds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+  }
+  .lds-roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+  }
+  .lds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+  }
+  .lds-roller div:nth-child(5):after {
+    top: 71px;
+    left: 32px;
+  }
+  .lds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+  }
+  .lds-roller div:nth-child(6):after {
+    top: 68px;
+    left: 24px;
+  }
+  .lds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+  }
+  .lds-roller div:nth-child(7):after {
+    top: 63px;
+    left: 17px;
+  }
+  .lds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+  }
+  .lds-roller div:nth-child(8):after {
+    top: 56px;
+    left: 12px;
+  }
+  @keyframes lds-roller {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
